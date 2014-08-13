@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = function getBemProperties(p) {
-    var deps = {};
+    var deps = { path: p };
     var parts = p.split(path.sep);
     while (parts.length) {
         var part = parts.pop();

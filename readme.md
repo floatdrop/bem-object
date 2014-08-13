@@ -14,9 +14,13 @@ BEM object is just an abstraction. Each object contains next properties:
 
 ## Helpers
 
+#### create(path, cb)
+
+Constructs BEM object from path with `fromPath` method and reads `{bem}.deps.js` to override properties defined in it.
+
 #### fromPath(path)
 
-Constructs BEM object from path to block. It will parse path to extract `block`, `elem`, `mod`, `level` and `*.deps.js` to extract `require` and `expect` properties.
+Constructs BEM object from path to block. It will parse path to extract `block`, `elem`, `mod`, `level`.
 
 ##### path
 Type: `String`
