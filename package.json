@@ -1,0 +1,30 @@
+{
+  "name": "bem-object",
+  "version": "0.0.0",
+  "description": "Data abstraction for gulp-bem",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/floatdrop/bem-object.git"
+  },
+  "keywords": [
+    "BEM",
+    "object"
+  ],
+  "author": "Vsevolod Strukchinsky <floatdrop@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/floatdrop/bem-object/issues"
+  },
+  "homepage": "https://github.com/floatdrop/bem-object",
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "should": "^4.0.4"
+  }
+}
