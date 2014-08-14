@@ -18,4 +18,9 @@ describe('BEMobject.fromPath', function () {
             path: nodeps
         });
     });
+
+    it('should add properties from ext parameter', function () {
+        var bem = fromPath(nodeps, { prop: true });
+        bem.should.have.property('prop', true);
+    });
 });

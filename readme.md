@@ -24,7 +24,7 @@ And may contain these:
 
 Constructs BEM object from path with `fromPath` method and reads `{bem}.deps.js` to override properties defined in it.
 
-#### fromPath(path)
+#### fromPath(path, [ext])
 
 Constructs BEM object from path to block. It will parse path to extract `block`, `elem`, `mod`, `level`.
 
@@ -32,6 +32,11 @@ Constructs BEM object from path to block. It will parse path to extract `block`,
 Type: `String`
 
 Path to block __directory__.
+
+##### ext
+Type: `Object`
+
+Object with properties, which will be assigned to constructed BEM object.
 
 ## License
 
