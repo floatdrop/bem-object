@@ -33,7 +33,8 @@ describe('BEMobject.create', function () {
                 level: 'fixtures',
                 bem: 'withdeps',
                 require: [{ block: 'me' }],
-                expect: undefined
+                expect: undefined,
+                exclude: undefined
             });
             done();
         });

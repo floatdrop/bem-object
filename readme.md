@@ -6,6 +6,7 @@ BEM object is just an abstraction. Each object contains next properties:
  * `level` - level of definition of current block
  * `require` - array of BEM blocks, that will be included before current block
  * `expect` - array of BEM blocks, that should be included after current block
+ * `exclude` - array of BEM blocks, that should be excluded with this block
  * `block` - name of the block
  * `elem` - name of the element
  * `mod` - name of the modificator
