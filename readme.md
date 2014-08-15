@@ -5,15 +5,18 @@ BEM object contains definition of BEM "blocks" in notion, that it could be eithe
 Each object should contain next properties:
 
  * `path` - full path to directory, that contains block files
+
  * `block` - name of the block
  * `elem` - name of the element
  * `mod` - name of the modificator
  * `value` - value of the modificator
+
  * `bem` - valid BEM identifier, composed from `block`, `elem`, `mod` and `value`
+ * `id` - alias to `bem`
 
 And may contain these:
 
-* `level` - level of definition of current block
+* `level` - level of definition of current block (it will be `default` by default)
 * `require` - array of BEM blocks, that will be included before current block
 * `expect` - array of BEM blocks, that should be included after current block
 * `ignore` - array of BEM blocks, that should be ignored

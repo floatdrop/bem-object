@@ -1,24 +1,28 @@
 var path = require('path');
 
 module.exports = function getBemProperties(p) {
-    var deps = { path: p };
+    var bem = { path: p };
     var parts = p.split(path.sep);
     while (parts.length) {
         var part = parts.pop();
         if (part.indexOf('__') === 0) {
-            deps.elem = part.slice(2);
+            bem.elem = part.slice(2);
         } else if (part[0] === '_') {
-            deps.mod = part.slice(1);
+            bem.mod = part.slice(1);
         } else {
-            deps.block = part;
-            deps.level = parts.join('/');
+            bem.block = part;
+            bem.level = parts.join('/');
             break;
         }
     }
 
-    deps.bem = deps.block;
-    if (deps.elem) { deps.bem += '__' + deps.elem; }
-    if (deps.mod) { deps.bem += '_' + deps.mod; }
+    bem.bem = bem.block;
+    if (bem.elem) { bem.bem += '__' + bem.elem; }
+    if (bem.mod) { bem.bem += '_' + bem.mod; }
 
-    return deps;
+    bem.id = bem.bem;
+
+    if (bem.level === '') { bem.level = 'default'; }
+
+    return bem;
 };

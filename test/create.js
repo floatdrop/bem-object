@@ -18,6 +18,7 @@ describe('BEMobject.create', function () {
                 mod: 'mod',
                 level: path.join(__dirname, 'fixtures'),
                 bem: 'nodeps__elem_mod',
+                id: 'nodeps__elem_mod',
                 path: nodeps
             });
             done();
@@ -32,6 +33,7 @@ describe('BEMobject.create', function () {
                 block: 'withdeps',
                 level: path.join(__dirname, 'fixtures'),
                 bem: 'withdeps',
+                id: 'withdeps',
                 require: [{ block: 'me' }],
                 expect: undefined,
                 ignore: undefined

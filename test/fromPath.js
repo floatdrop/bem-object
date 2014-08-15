@@ -15,6 +15,7 @@ describe('BEMobject.fromPath', function () {
             mod: 'mod',
             level: path.join(__dirname, 'fixtures'),
             bem: 'nodeps__elem_mod',
+            id: 'nodeps__elem_mod',
             path: nodeps
         });
     });
