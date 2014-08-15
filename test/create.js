@@ -16,7 +16,7 @@ describe('BEMobject.create', function () {
                 block: 'nodeps',
                 elem: 'elem',
                 mod: 'mod',
-                level: 'fixtures',
+                level: path.join(__dirname, 'fixtures'),
                 bem: 'nodeps__elem_mod',
                 path: nodeps
             });
@@ -30,11 +30,11 @@ describe('BEMobject.create', function () {
             bem.should.eql({
                 path: withdeps,
                 block: 'withdeps',
-                level: 'fixtures',
+                level: path.join(__dirname, 'fixtures'),
                 bem: 'withdeps',
                 require: [{ block: 'me' }],
                 expect: undefined,
-                exclude: undefined
+                ignore: undefined
             });
             done();
         });

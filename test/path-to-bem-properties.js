@@ -28,7 +28,7 @@ describe('path-to-bem-properties', function () {
     });
 
     it('should set level to block parent', function () {
-        props('/level/block').should.have.property('level', 'level');
+        props('/level/block').should.have.property('level', '/level');
     });
 
     it('should set bem to valid BEM identificator', function () {

@@ -11,7 +11,7 @@ module.exports = function getBemProperties(p) {
             deps.mod = part.slice(1);
         } else {
             deps.block = part;
-            deps.level = parts[parts.length - 1];
+            deps.level = parts.join('/');
             break;
         }
     }

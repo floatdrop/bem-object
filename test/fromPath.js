@@ -13,7 +13,7 @@ describe('BEMobject.fromPath', function () {
             block: 'nodeps',
             elem: 'elem',
             mod: 'mod',
-            level: 'fixtures',
+            level: path.join(__dirname, 'fixtures'),
             bem: 'nodeps__elem_mod',
             path: nodeps
         });
