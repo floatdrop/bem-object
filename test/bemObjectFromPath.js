@@ -1,6 +1,6 @@
 /* global describe, it */
 
-var props = require('../path-to-bem-properties.js');
+var props = require('../lib/bemObjectFromPath.js');
 require('should');
 
 describe('path-to-bem-properties', function () {

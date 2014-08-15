@@ -19,6 +19,16 @@ And may contain these:
 * `expect` - array of BEM blocks, that should be included after current block
 * `ignore` - array of BEM blocks, that should be ignored
 
+## Getters
+
+#### bemObject.required
+
+This property will return an array of properly initiated BEM object.
+
+#### bemObject.expected
+
+Same as `required`, but for `expect` property.
+
 ## Helpers
 
 #### create(path, cb)
