@@ -16,7 +16,7 @@ And may contain these:
 * `level` - level of definition of current block
 * `require` - array of BEM blocks, that will be included before current block
 * `expect` - array of BEM blocks, that should be included after current block
-* `exclude` - array of BEM blocks, that should be excluded with this block
+* `ignore` - array of BEM blocks, that should be ignored
 
 ## Helpers
 
