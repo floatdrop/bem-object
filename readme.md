@@ -5,12 +5,10 @@ BEM object contains definition of BEM "blocks" in notion, that it could be eithe
 Each object should contain next properties:
 
  * `path` - full path to directory, that contains block files
-
  * `block` - name of the block
  * `elem` - name of the element
  * `mod` - name of the modificator
  * `value` - value of the modificator
-
  * `bem` - valid BEM identifier, composed from `block`, `elem`, `mod` and `value`
  * `id` - alias to `bem`
 
