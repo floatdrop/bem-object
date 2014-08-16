@@ -17,10 +17,10 @@ describe('BEMobject.create', function () {
                 elem: 'elem',
                 mod: 'mod',
                 level: path.join(__dirname, 'fixtures'),
-                bem: 'nodeps__elem_mod',
-                id: 'nodeps__elem_mod',
                 path: nodeps
             });
+            bem.should.have.property('bem', 'nodeps__elem_mod');
+            bem.should.have.property('id', 'nodeps__elem_mod');
             done();
         });
     });
@@ -32,12 +32,12 @@ describe('BEMobject.create', function () {
                 path: withdeps,
                 block: 'withdeps',
                 level: path.join(__dirname, 'fixtures'),
-                bem: 'withdeps',
-                id: 'withdeps',
                 require: [{ block: 'me' }],
                 expect: undefined,
                 ignore: undefined
             });
+            bem.should.have.property('bem', 'withdeps');
+            bem.should.have.property('id', 'withdeps');
             done();
         });
     });

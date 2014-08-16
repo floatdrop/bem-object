@@ -14,10 +14,10 @@ describe('BEMobject.fromPath', function () {
             elem: 'elem',
             mod: 'mod',
             level: path.join(__dirname, 'fixtures'),
-            bem: 'nodeps__elem_mod',
-            id: 'nodeps__elem_mod',
             path: nodeps
         });
+        bem.should.have.property('bem', 'nodeps__elem_mod');
+        bem.should.have.property('id', 'nodeps__elem_mod');
     });
 
     it('should add properties from ext parameter', function () {
