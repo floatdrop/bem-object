@@ -37,6 +37,10 @@ Same as `required`, but for `expect` property.
 
 ## Helpers
 
+#### stream(path)
+
+Streams all BEM objects under `path`, `path/_*`, `path/__*` and `path/__*/_*`.
+
 #### create(path, cb)
 
 Constructs BEM object from path with `fromPath` method and reads `{bem}.deps.js` to override properties defined in it.
