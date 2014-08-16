@@ -13,9 +13,9 @@ describe('BEMobject.fromPath', function () {
             block: 'nodeps',
             elem: 'elem',
             mod: 'mod',
-            level: path.join(__dirname, 'fixtures'),
-            path: nodeps
+            level: path.join(__dirname, 'fixtures')
         });
+        bem.should.have.property('path', nodeps);
         bem.should.have.property('bem', 'nodeps__elem_mod');
         bem.should.have.property('id', 'nodeps__elem_mod');
     });
