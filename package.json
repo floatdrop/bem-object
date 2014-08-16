@@ -1,6 +1,6 @@
 {
   "name": "bem-object",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "Data abstraction for gulp-bem",
   "main": "index.js",
   "directories": {
