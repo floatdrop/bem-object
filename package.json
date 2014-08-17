@@ -25,9 +25,13 @@
   "homepage": "https://github.com/floatdrop/bem-object",
   "devDependencies": {
     "mocha": "^1.21.4",
-    "should": "^4.0.4"
+    "should": "^4.0.4",
+    "stream-assert": "^0.2.0"
   },
   "dependencies": {
-    "object-assign": "^0.4.0"
+    "object-assign": "^0.4.0",
+    "read-streams": "^0.1.0",
+    "stream-dirs": "^2.0.0",
+    "through2": "^0.6.1"
   }
 }
