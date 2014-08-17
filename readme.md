@@ -1,4 +1,4 @@
-# bem-object [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
+# bem-object [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status](https://coveralls.io/repos/floatdrop/bem-object/badge.png)](https://coveralls.io/r/floatdrop/bem-object)
 
 BEM object contains definition of BEM "blocks" in notion, that it could be either block itself, or element of a block, or block with modificator, etc...
 
