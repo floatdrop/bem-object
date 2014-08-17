@@ -14,7 +14,7 @@ describe('BEMobject', function () {
         bem.should.have.property('test', true);
     });
 
-    it('should return empty array from required by defualt', function () {
+    it('should return empty array from required by default', function () {
         var bem = new BEMObject();
         bem.required.should.eql([]);
         bem.expected.should.eql([]);
