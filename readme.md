@@ -30,9 +30,12 @@ You can read about how `require` and `expect` affects deps ordering in [`deps-gr
 ## Getters
 
 #### bemObject.id
-> alias bem
 
-Valid BEM identifier, composed from `block`, `elem`, `mod` and `value`.
+BEM identifier without a `value`.
+
+#### bemObject.bem
+
+BEM identifier, composed from `block`, `elem`, `mod` and `value`.
 
 #### bemObject.path
 
