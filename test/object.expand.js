@@ -3,7 +3,7 @@
 var BEMObject = require('../lib/object.js');
 require('should');
 
-describe('object.expand', function () {
+describe('BEMobject.expand', function () {
     var bem = new BEMObject();
 
     it('should throw expection on empty object', function () {

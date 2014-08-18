@@ -3,7 +3,7 @@
 var BEMObject = require('../lib/object.js');
 require('should');
 
-describe('object.copy', function () {
+describe('BEMobject.copy', function () {
     it('should take elem from context object, if mod is defined', function () {
         new BEMObject({
             level: 'level',
