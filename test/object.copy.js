@@ -4,6 +4,12 @@ var BEMObject = require('../lib/object.js');
 require('should');
 
 describe('BEMobject.copy', function () {
+    it('should throw if target is not an object', function () {
+        (function () {
+            new BEMObject().copy(1);
+        }).should.throw();
+    });
+
     it('should take elem from context object, if mod is defined', function () {
         new BEMObject({
             level: 'level',
