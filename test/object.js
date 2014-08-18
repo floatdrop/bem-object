@@ -20,7 +20,7 @@ describe('BEMobject', function () {
         bem.expected.should.eql([]);
     });
 
-    it('should return filled BEMObjects from required', function () {
+    it('should return filled BEMObjects from required and expected', function () {
         var bem = new BEMObject({
             level: 'level',
             require: { block: 'new' },
