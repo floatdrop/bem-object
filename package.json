@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "glob-stream": "^3.1.15",
-    "object-assign": "^0.4.0",
+    "object-assign": "^1.0.0",
     "parse-bem-identifier": "^3.0.0",
-    "through2": "^0.6.1"
+    "through2": "^1.1.1"
   }
 }
