@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "object-assign": "^0.4.0",
+    "parse-bem-identifier": "^3.0.0",
     "stream-dirs": "^2.0.0",
     "through2": "^0.6.1"
   }

@@ -12,6 +12,40 @@ describe('BEMobject.expand', function () {
         }).should.throw();
     });
 
+    it('should properly handle string', function () {
+        bem.expand('block').should.eql([{
+            block: 'block'
+        }]);
+
+        bem.expand('block__elem').should.eql([{
+            block: 'block',
+            elem: 'elem'
+        }]);
+
+        bem.expand('block__elem_mod').should.eql([{
+            block: 'block',
+            elem: 'elem',
+            mod: 'mod'
+        }]);
+
+        bem.expand('block__elem_mod_val').should.eql([{
+            block: 'block',
+            elem: 'elem',
+            mod: 'mod',
+            value: 'val'
+        }]);
+
+        bem.expand('block_mod').should.eql([{
+            block: 'block',
+            mod: 'mod',
+        }]);
+        bem.expand('block_mod_val').should.eql([{
+            block: 'block',
+            mod: 'mod',
+            value: 'val'
+        }]);
+    });
+
     it('should properly handle single elem', function () {
         bem.expand({ elem: 'singleElem' }).should.eql([{
             elem: 'singleElem'
