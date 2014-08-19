@@ -1,4 +1,6 @@
-# bem-object [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
+# bem-object
+
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
 
 BEM object is abstract definition of directory, that contains files of your site.
 
@@ -129,13 +131,13 @@ __Note:__ you can not have `elem` with `elems` in one deps object (same applies 
 MIT (c) 2014 Vsevolod Strukchinsky
 
 [npm-url]: https://npmjs.org/package/bem-object
-[npm-image]: https://badge.fury.io/js/bem-object.png
+[npm-image]: http://img.shields.io/npm/v/bem-object.svg?style=flat
 
 [travis-url]: http://travis-ci.org/floatdrop/bem-object
-[travis-image]: https://travis-ci.org/floatdrop/bem-object.png?branch=master
+[travis-image]: http://img.shields.io/travis/floatdrop/bem-object.svg?branch=master&style=flat
 
-[depstat-url]: https://david-dm.org/floatdrop/bem-object
-[depstat-image]: https://david-dm.org/floatdrop/bem-object.png?theme=shields.io
+[depstat-url]: https://gemnasium.com/floatdrop/bem-object
+[depstat-image]: http://img.shields.io/gemnasium/floatdrop/bem-object.svg?style=flat
 
 [coveralls-url]: https://coveralls.io/r/floatdrop/bem-object
-[coveralls-image]: https://coveralls.io/repos/floatdrop/bem-object/badge.png
+[coveralls-image]: http://img.shields.io/coveralls/floatdrop/bem-object.svg?style=flat
