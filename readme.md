@@ -23,7 +23,7 @@ Each object should contain next properties:
 And may contain these:
 
 * `level` - level of definition of current block (full path to level directory)
-* `require`, `expect` - contains `Array` of [deps objects]() (just object will be treated as `Array` with single element).
+* `require`, `expect` - contains `Array` of [deps objects]() (just object will be treated as `Array` with single element). It can contain `String`, that will be [parsed](https://github.com/floatdrop/parse-bem-identifier).
 
 You can read about how `require` and `expect` affects deps ordering in [`deps-graph` readme](https://github.com/floatdrop/deps-graph#deps-graph----).
 
