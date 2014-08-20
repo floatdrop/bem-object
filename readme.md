@@ -92,6 +92,8 @@ File with name composed from `bem` property and `.deps.js` extension considered 
 
 Even thou it has `js` extension, conceptually it is `json` with [properties](https://github.com/floatdrop/bem-object#properties) for BEM object.
 
+__Note:__ we do not support `Array` in deps files as `bem-tools` or `enb` does, so we just pick first item from it.
+
 ## deps objects
 
 This is equivalent of BEM object, but with additional properties, that reduces boilerplate code:
