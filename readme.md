@@ -123,7 +123,7 @@ If deps object contain `elems` or `mods` it will be splitted in multiple BEM obj
 })
 ```
 
-`level`, `block` and `elem` properties will be taken from current BEM object, that described with `{bem}.deps.js` file. If deps object contains `block` and `mod`/`mods` - then `elem` will not be taken from BEM object.
+`level`, `block`, `elem`, `mod` and `value` properties will be taken from current BEM object, that described with `{bem}.deps.js` file. They will be taken while most concrete is not defined in deps object ([see code](https://github.com/floatdrop/bem-object/blob/master/lib/object.js#L19-L25) that does it, if this sounds complicated).
 
 __Note:__ you can not have `elem` with `elems` in one deps object (same applies to `mod` and `mods`).
 
