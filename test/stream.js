@@ -14,7 +14,7 @@ describe('stream', function () {
 
     it('should read full block structure', function (done) {
         stream(fullblock)
-            .pipe(assert.length(4))
+            .pipe(assert.length(6))
             .on('end', done);
     });
 });

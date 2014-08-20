@@ -2,16 +2,18 @@
 
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
 
-BEM object is abstract definition of directory, that contains files of your site.
+BEM object is abstract definition of group of files, that matching to BEM naming conventions. For example:
 
 ```bash
-/desktop.blocks
-    /index              # bem-object index              (level: /desktop.blocks)
-        /__head         # bem-object index__head        (level: /desktop.blocks)
-        /__body         # bem-object index__body        (level: /desktop.blocks)
-            /_dark      # bem-object index__body_dark   (level: /desktop.blocks)
-        /_mobile        # bem-object index_mobile       (level: /desktop.blocks)
+/block              # bem-object (1)
+    block.css       # file, that described by (1)
+    /_mod               # bem-object (2)
+        block_mod.css   # file, that described by (2)
+        block_mod_val1.css      # bem-object (3)
+        block_mod_val2.css      # bem-object (4)
 ```
+
+As you can see, modificator values can't be accessed by `(2)`, so we generate additional `(3)` and `(4)` to access them.
 
 ## Properties
 
@@ -32,10 +34,7 @@ You can read about how `require` and `expect` affects deps ordering in [`deps-gr
 ## Getters
 
 #### bemObject.id
-
-BEM identifier without a `value`.
-
-#### bemObject.bem
+###### alias bem
 
 BEM identifier, composed from `block`, `elem`, `mod` and `value`.
 
@@ -57,7 +56,7 @@ This methods helps you create BEM object from different sources (like `level` di
 
 #### stream(path)
 
-Streams all BEM objects under `path`, `path/_*`, `path/__*` and `path/__*/_*`.
+Streams all BEM objects under `path`, `path/_*`, `path/__*`, `path/__*/_*` and all modificator values in `path/_*` and `path/__*/_*`.
 
 ###### path
 Type: `String`  
