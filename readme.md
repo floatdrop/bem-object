@@ -98,7 +98,7 @@ __Note:__ we do not support `Array` in deps files as `bem-tools` or `enb` does, 
 
 This is equivalent of BEM object, but with additional properties, that reduces boilerplate code:
 
- * `elems` - contains `Array` of `String`
+ * `elems` - contains `Array` of `String` (if it contains `String` it will be wrapped in array).
  * `mods` - contains `Object` with keys as modificators names and values as modificators values. Values can be `String` or `Array` of `String`.
 
 If deps object contain `elems` or `mods` it will be splitted in multiple BEM objects. It will not take multiplication of `elems` and `mods`, if both are present in deps object. Instead it will be interpretated as two deps objects: one with `elems` and other with `mods`.
