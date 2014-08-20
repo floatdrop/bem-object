@@ -137,8 +137,8 @@ MIT (c) 2014 Vsevolod Strukchinsky
 [travis-url]: http://travis-ci.org/floatdrop/bem-object
 [travis-image]: http://img.shields.io/travis/floatdrop/bem-object.svg?branch=master&style=flat
 
-[depstat-url]: https://gemnasium.com/floatdrop/bem-object
-[depstat-image]: http://img.shields.io/gemnasium/floatdrop/bem-object.svg?style=flat
+[depstat-url]: http://david-dm.org/floatdrop/bem-object
+[depstat-image]: http://img.shields.io/david/floatdrop/bem-object.svg?style=flat
 
 [coveralls-url]: https://coveralls.io/r/floatdrop/bem-object
 [coveralls-image]: http://img.shields.io/coveralls/floatdrop/bem-object.svg?style=flat
