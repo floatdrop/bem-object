@@ -70,7 +70,7 @@ Constructs BEM object from path with `fromPath` method and reads `{bem}.deps.js`
 ###### path
 Type: `String`
 
-Direct path to directory that may contain `{bem}.deps.js` file.
+Direct path to directory (or file with modificator value in BEM formed name) that may contain `{bem}.deps.js` file in (or near) it.
 
 #### fromPath(path, [ext])
 
