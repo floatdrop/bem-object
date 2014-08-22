@@ -50,6 +50,7 @@ describe('BEMobject.create', function () {
                 block: 'withdeps',
                 level: path.join(__dirname, 'fixtures'),
                 require: [{ block: 'me' }],
+                value: undefined,
                 expect: undefined,
                 ignore: undefined
             });
