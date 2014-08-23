@@ -17,19 +17,13 @@ As you can see, modificator values can't be accessed by `(2)`, so we generate ad
 
 ## Properties
 
-Each object should contain next properties:
+Each object will contain next properties:
 
  * `block` - name of the block
  * `elem` - name of the element
  * `mod` - name of the modificator
  * `val` - value of the modificator
-
-And may contain these:
-
-* `level` - level of definition of current block (full path to level directory)
-* `require`, `expect` - contains `Array` of [deps objects]() (just object will be treated as `Array` with single element).
-
-You can read about how `require` and `expect` affects deps ordering in [`deps-graph` readme](https://github.com/floatdrop/deps-graph#deps-graph----).
+ * `level` - level of definition of current block (full path to level directory)
 
 ## Getters
 
