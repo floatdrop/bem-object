@@ -57,7 +57,7 @@ Type: `String`
 
 Contains path to directory (we passing `levels` directories in `gulp-bem`) in which method should find all BEM object that correcsponds to blocks, blocks elements, blocks modificators and blocks elements modificators.
 
-#### create(path, cb)
+#### create(path, [options], cb)
 
 Constructs BEM object from path with `fromPath` method.
 
@@ -66,9 +66,15 @@ Type: `String`
 
 Direct path to directory (or file with modificator value in BEM formed name).
 
-#### fromPath(path, [ext])
+#### fromPath(path, options, [ext])
 
 Constructs BEM object from path to block. It will parse path to extract `block`, `elem`, `mod`, `level`.
+
+###### options
+Type: `Object`  
+Default: `{ elem: '__', mod: '_' }`
+
+Describes options, that will be used for BEM properties matching in path.
 
 ##### path
 Type: `String`
