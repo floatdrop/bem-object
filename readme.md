@@ -48,9 +48,13 @@ Same as `required`, but for `expect` property.
 
 This methods helps you create BEM object from different sources (like `level` directory in case of `stream` method).
 
-#### stream(path)
+#### stream(path, [options])
 
-Streams all BEM objects under `path`, `path/_*`, `path/__*`, `path/__*/_*` and all modificator values in `path/_*` and `path/__*/_*`.
+Streams all BEM objects under `path`, `path/_*`, `path/__*`, `path/__*/_*` and all modificator values in `path/_*` and `path/__*/_*` (`__` and `_` are default values from options).
+
+###### options
+Type: `Object`  
+Default: `{ elem: '__', mod: '_' }`
 
 ###### path
 Type: `String`  
