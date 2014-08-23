@@ -22,12 +22,12 @@ Each object should contain next properties:
  * `block` - name of the block
  * `elem` - name of the element
  * `mod` - name of the modificator
- * `value` - value of the modificator
+ * `val` - value of the modificator
 
 And may contain these:
 
 * `level` - level of definition of current block (full path to level directory)
-* `require`, `expect` - contains `Array` of [deps objects]() (just object will be treated as `Array` with single element). It can contain `String`, that will be [parsed](https://github.com/floatdrop/parse-bem-identifier).
+* `require`, `expect` - contains `Array` of [deps objects]() (just object will be treated as `Array` with single element).
 
 You can read about how `require` and `expect` affects deps ordering in [`deps-graph` readme](https://github.com/floatdrop/deps-graph#deps-graph----).
 
@@ -65,12 +65,12 @@ Contains path to directory (we passing `levels` directories in `gulp-bem`) in wh
 
 #### create(path, cb)
 
-Constructs BEM object from path with `fromPath` method and reads `{bem}.deps.js` to override properties defined in it (also expands `deps.js` file by the [specification](https://github.com/floatdrop/bem-object#.deps.js)).
+Constructs BEM object from path with `fromPath` method.
 
 ###### path
 Type: `String`
 
-Direct path to directory (or file with modificator value in BEM formed name) that may contain `{bem}.deps.js` file in (or near) it.
+Direct path to directory (or file with modificator value in BEM formed name).
 
 #### fromPath(path, [ext])
 
@@ -85,16 +85,6 @@ Path to block __directory__.
 Type: `Object`
 
 Object with properties, which will be assigned to constructed BEM object.
-
-## .deps.js
-
-File with name composed from `bem` property and `.deps.js` extension considered `deps` file of current BEM object. It contains links to other BEM objects, that should be included/excluded with this BEM object.
-
-Even thou it has `js` extension, conceptually it is `json` with [properties](https://github.com/floatdrop/bem-object#properties) for BEM object.
-
-__Note:__ we do not support `Array` in deps files as `bem-tools` or `enb` does, so we just pick first item from it.
-
-All dependencies in `require`/`expect` properties is normalized by [deps-normalize](https://github.com/floatdrop/deps-normalize#normalization) package.
 
 ## License
 
