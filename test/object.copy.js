@@ -36,7 +36,7 @@ describe('BEMobject.copy', function () {
             block: 'two',
             elem: 'two',
             mod: 'two',
-            value: 'two'
+            val: 'two'
         });
 
         bem.copy({ block: 'one' }).should.eql({
@@ -51,8 +51,8 @@ describe('BEMobject.copy', function () {
             level: 'two', block: 'two', elem: 'two', mod: 'one'
         });
 
-        bem.copy({ value: 'one' }).should.eql({
-            level: 'two', block: 'two', elem: 'two', mod: 'two', value: 'one'
+        bem.copy({ val: 'one' }).should.eql({
+            level: 'two', block: 'two', elem: 'two', mod: 'two', val: 'one'
         });
     });
 
@@ -62,9 +62,9 @@ describe('BEMobject.copy', function () {
             block: 'two',
             elem: 'two',
             mod: 'two',
-            value: 'two'
-        }).copy({ level: 'one', block: 'one', elem: 'one', mod: 'one', value: 'one' }).should.eql({
-            level: 'one', block: 'one', elem: 'one', mod: 'one', value: 'one'
+            val: 'two'
+        }).copy({ level: 'one', block: 'one', elem: 'one', mod: 'one', val: 'one' }).should.eql({
+            level: 'one', block: 'one', elem: 'one', mod: 'one', val: 'one'
         });
     });
 });
