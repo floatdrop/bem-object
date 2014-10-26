@@ -1,8 +1,52 @@
-var BEMObject = {};
+var basename = require('path').basename;
+var dirname = require('path').dirname;
+var BEMNaming = require('bem-naming').BEMNaming;
 
-BEMObject.BEMObject = require('./lib/object.js');
-BEMObject.fromPath = require('./lib/fromPath.js');
-BEMObject.create = require('./lib/create.js');
-BEMObject.stream = require('./lib/stream.js');
+function BEMObject(props) {
+    this.block = props.block;
+    this.elem = props.elem;
+    this.modName = props.modName;
+    this.modVal = props.modVal;
+}
 
-module.exports = BEMObject;
+function set(obj, prop, value) {
+    if (value === undefined) { return; }
+    obj[prop] = value;
+}
+
+BEMObject.prototype.copy = function (target) {
+    if (typeof target !== 'object') {
+        throw new Error('Target object should be instance of Object, not ' + typeof target);
+    }
+
+    var props = ['level', 'block', 'elem', 'modName', 'modVal'];
+
+    for (var i = 0; i < props.length; i++) {
+        var prop = props[i];
+        if (target[prop]) { break; }
+        set(target, prop, target[prop] || this[prop]);
+    }
+
+    return new BEMObject(target);
+};
+
+module.exports = function (path, options) {
+    var parts = path;
+    var naming = new BEMNaming(options);
+
+    if (typeof path === 'string') {
+        parts = naming.parse(basename(path));
+        parts.level = dirname(path);
+    }
+
+    var bem = new BEMObject(parts);
+
+    Object.defineProperty(bem, 'id', {
+        get: function () {
+            return naming.stringify(this);
+        },
+        enumerable: true
+    });
+
+    return bem;
+};

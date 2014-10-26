@@ -30,12 +30,8 @@
     "should": "^4.0.4",
     "istanbul": "^0.3.0",
     "mocha-lcov-reporter": "^0.0.1",
-    "stream-assert": "^0.2.0"
   },
   "dependencies": {
-    "bem-naming": "^0.3.0",
-    "glob-stream": "^3.1.15",
-    "object-assign": "^1.0.0",
-    "through2": "^1.1.1"
+    "bem-naming": "^0.3.0"
   }
 }
