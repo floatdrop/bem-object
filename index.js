@@ -3,6 +3,7 @@ var dirname = require('path').dirname;
 var BEMNaming = require('bem-naming').BEMNaming;
 
 function BEMObject(props) {
+    this.level = props.level;
     this.block = props.block;
     this.elem = props.elem;
     this.modName = props.modName;
@@ -41,6 +42,7 @@ module.exports = function (path, options) {
 
     if (typeof path === 'string') {
         parts = naming.parse(basename(path));
+        if (!parts) { throw new Error('Could not parse "' + path + '"'); }
         parts.level = dirname(path);
     }
 

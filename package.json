@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "mocha -R spec",
+    "coverage": "istanbul cover _mocha -- -R spec",
     "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
   "repository": {
@@ -29,7 +30,7 @@
     "coveralls": "^2.7.0",
     "should": "^4.0.4",
     "istanbul": "^0.3.0",
-    "mocha-lcov-reporter": "^0.0.1",
+    "mocha-lcov-reporter": "^0.0.1"
   },
   "dependencies": {
     "bem-naming": "^0.3.0"
