@@ -2,19 +2,6 @@
 
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
 
-BEM object is abstract definition of group of files, that matching to BEM naming conventions. For example:
-
-```bash
-/block              # bem-object (1)
-    block.css       # file, that described by (1)
-    /_mod               # bem-object (2)
-        block_mod.css   # file, that described by (2)
-        block_mod_val1.css      # bem-object (3)
-        block_mod_val2.css      # bem-object (4)
-```
-
-As you can see, modificator values can't be accessed by `(2)`, so we generate additional `(3)` and `(4)` to access them.
-
 ## Properties
 
 Each object will contain next properties:
