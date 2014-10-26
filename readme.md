@@ -34,6 +34,15 @@ BEM identifier, composed from `block`, `elem`, `mod` and `val`.
 
 ## API
 
+### object(props)
+
+Constructs BEM Object.
+
+`props` can be:
+
+ * String - specifies level and properties: `some/level/block__elem_mod_val`
+ * Object - contains [properties](#properties) to assign
+
 ## License
 
 MIT (c) 2014 Vsevolod Strukchinsky
