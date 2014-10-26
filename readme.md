@@ -32,6 +32,8 @@ Each object will contain next properties:
 
 BEM identifier, composed from `block`, `elem`, `mod` and `val`.
 
+## API
+
 ## License
 
 MIT (c) 2014 Vsevolod Strukchinsky

@@ -30,9 +30,14 @@ BEMObject.prototype.copy = function (target) {
     return new BEMObject(target);
 };
 
+
 module.exports = function (path, options) {
     var parts = path;
     var naming = new BEMNaming(options);
+
+    function id() {
+        return naming.stringify(this);
+    }
 
     if (typeof path === 'string') {
         parts = naming.parse(basename(path));
@@ -42,9 +47,12 @@ module.exports = function (path, options) {
     var bem = new BEMObject(parts);
 
     Object.defineProperty(bem, 'id', {
-        get: function () {
-            return naming.stringify(this);
-        },
+        get: id,
+        enumerable: true
+    });
+
+    Object.defineProperty(bem, 'bem', {
+        get: id,
         enumerable: true
     });
 
