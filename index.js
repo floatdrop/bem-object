@@ -20,7 +20,7 @@ BEMObject.prototype.copy = function (target) {
         throw new Error('Target object should be instance of Object, not ' + typeof target);
     }
 
-    var props = ['level', 'block', 'elem', 'modName', 'modVal'];
+    var props = ['block', 'elem', 'modName', 'modVal'];
 
     for (var i = 0; i < props.length; i++) {
         var prop = props[i];
