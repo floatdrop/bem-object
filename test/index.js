@@ -57,7 +57,6 @@ describe('object', function () {
 
     it('should have copy method', function () {
         var result = object('level/block_mod').copy({elem: 'elem'});
-        result.should.have.property('level', 'level');
         result.should.have.property('block', 'block');
         result.should.have.property('elem', 'elem');
         result.should.not.have.property('modName', 'mod');
