@@ -44,11 +44,11 @@ MIT (c) 2014 Vsevolod Strukchinsky
 [npm-url]: https://npmjs.org/package/bem-object
 [npm-image]: http://img.shields.io/npm/v/bem-object.svg?style=flat
 
-[travis-url]: http://travis-ci.org/floatdrop/bem-object
-[travis-image]: http://img.shields.io/travis/floatdrop/bem-object.svg?branch=master&style=flat
+[travis-url]: http://travis-ci.org/getbem/bem-object
+[travis-image]: http://img.shields.io/travis/getbem/bem-object.svg?branch=master&style=flat
 
-[depstat-url]: http://david-dm.org/floatdrop/bem-object
-[depstat-image]: http://img.shields.io/david/floatdrop/bem-object.svg?style=flat
+[depstat-url]: http://david-dm.org/getbem/bem-object
+[depstat-image]: http://img.shields.io/david/getbem/bem-object.svg?style=flat
 
-[coveralls-url]: https://coveralls.io/r/floatdrop/bem-object
-[coveralls-image]: http://img.shields.io/coveralls/floatdrop/bem-object.svg?style=flat
+[coveralls-url]: https://coveralls.io/r/getbem/bem-object
+[coveralls-image]: http://img.shields.io/coveralls/getbem/bem-object.svg?style=flat
