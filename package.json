@@ -33,6 +33,6 @@
     "mocha-lcov-reporter": "^0.0.1"
   },
   "dependencies": {
-    "bem-naming": "^0.3.0"
+    "bem-naming": "^0.4.0"
   }
 }
