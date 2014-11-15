@@ -28,7 +28,7 @@ Constructs BEM Object.
 
 `props` can be:
 
- * String - specifies level and properties: `some/level/block__elem_mod_val`
+ * String - specifies level and properties: `some/level/block__elem_mod_val.js` (extension is __required__)
  * Object - contains [properties](#properties) to assign
 
 ### object.copy(target)
