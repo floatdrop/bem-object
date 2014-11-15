@@ -18,10 +18,7 @@ function set(obj, prop, value) {
 }
 
 function defaultPath() {
-    var result = join(this.level, this.block);
-    if (this.elem) { result = join(result, '__' + this.elem); }
-    if (this.modName) { result = join(result, '_' + this.modName); }
-    return join(result, this.id + '.' + this.tech);
+    return join(this.level, this.id + '.' + this.tech);
 }
 
 BEMObject.prototype.copy = function (target) {
