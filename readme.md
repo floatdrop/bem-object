@@ -22,7 +22,7 @@ BEM identifier, composed from `block`, `elem`, `mod` and `val`.
 
 ## API
 
-### object(props)
+### object(props, [options])
 
 Constructs BEM Object.
 
@@ -30,6 +30,8 @@ Constructs BEM Object.
 
  * String - specifies level and properties: `some/level/block__elem_mod_val.js` (extension is __required__)
  * Object - contains [properties](#properties) to assign
+
+`options` will be passed to [bem-naming](https://github.com/bem/bem-naming) instance.
 
 ### object.copy(target)
 
