@@ -1,5 +1,6 @@
 var basename = require('path').basename;
 var dirname = require('path').dirname;
+var join = require('path').join;
 var BEMNaming = require('bem-naming').BEMNaming;
 
 function BEMObject(props) {
@@ -16,6 +17,13 @@ function set(obj, prop, value) {
     obj[prop] = value;
 }
 
+function defaultPath() {
+    var result = join(this.level, this.block);
+    if (this.elem) { result = join(result, '__' + this.elem); }
+    if (this.modName) { result = join(result, '_' + this.modName); }
+    return join(result, this.id + '.' + this.tech);
+}
+
 BEMObject.prototype.copy = function (target) {
     if (typeof target !== 'object') {
         throw new Error('Target object should be instance of Object, not ' + typeof target);
@@ -30,6 +38,7 @@ BEMObject.prototype.copy = function (target) {
     }
 
     target.tech = target.tech || this.tech;
+    target.path = this.path;
 
     return new BEMObject(target);
 };
@@ -60,6 +69,11 @@ module.exports = function (path, options) {
     }
 
     var bem = new BEMObject(parts);
+
+    Object.defineProperty(bem, 'path', {
+        get: defaultPath,
+        enumerable: true
+    });
 
     Object.defineProperty(bem, 'id', {
         get: id,

@@ -4,6 +4,11 @@ require('should');
 var object = require('..');
 
 describe('object', function () {
+    it('should construct path by default', function () {
+        object('level/block__elem_mod_val.js')
+        .path.should.eql('level/block/__elem/_mod/block__elem_mod_val.js')
+    });
+
     it('should throw, when path does not have extension', function () {
         (function() { object('level/block__elem_mod_val'); }).should.throw();
     });

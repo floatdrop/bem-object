@@ -13,6 +13,10 @@ Each object will contain next properties:
  * `level` - level of definition of current block (full path to level directory)
  * `tech` - postfix of file (`index.deps.js` tech is `deps.js`)
 
+Functions:
+
+ * `path` - function, that should return full path to file, that described by this bem object.
+
 ## Getters
 
 #### bemObject.id
