@@ -8,6 +8,7 @@ function BEMObject(props) {
     this.elem = props.elem;
     this.modName = props.modName;
     this.modVal = props.modVal;
+    this.tech = props.tech;
 }
 
 function set(obj, prop, value) {
@@ -28,6 +29,8 @@ BEMObject.prototype.copy = function (target) {
         set(target, prop, target[prop] || this[prop]);
     }
 
+    target.tech = target.tech || this.tech;
+
     return new BEMObject(target);
 };
 
@@ -41,8 +44,18 @@ module.exports = function (path, options) {
     }
 
     if (typeof path === 'string') {
-        parts = naming.parse(basename(path));
-        if (!parts) { throw new Error('Could not parse "' + path + '"'); }
+        var base = basename(path);
+        var idx = base.indexOf('.');
+
+        if (idx === -1) {
+            throw new Error('Basename should have extension, but got ' + base);
+        }
+
+        var tech = base.substring(idx + 1);
+        var bem = basename(path, '.' + tech);
+        parts = naming.parse(bem);
+        if (!parts) { throw new Error('Could not parse "' + bem + '"'); }
+        parts.tech = tech;
         parts.level = dirname(path);
     }
 

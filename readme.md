@@ -11,6 +11,7 @@ Each object will contain next properties:
  * `modName` - name of the modificator
  * `modVal` - value of the modificator
  * `level` - level of definition of current block (full path to level directory)
+ * `tech` - postfix of file (`index.deps.js` tech is `deps.js`)
 
 ## Getters
 
@@ -29,6 +30,12 @@ Constructs BEM Object.
 
  * String - specifies level and properties: `some/level/block__elem_mod_val`
  * Object - contains [properties](#properties) to assign
+
+### object.copy(target)
+
+Copy properties `block`, `elem`, `modName`, `modVal` in this order. That means, if `target` has `modName` only - `block` and `elem` will be copied.
+
+`tech` property always copied, if not defined in target.
 
 ## License
 
