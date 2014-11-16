@@ -12,11 +12,6 @@ function BEMObject(props) {
     this.tech = props.tech;
 }
 
-function set(obj, prop, value) {
-    if (value === undefined) { return; }
-    obj[prop] = value;
-}
-
 function defaultPath() {
     return join(this.level, this.id + '.' + this.tech);
 }
@@ -31,7 +26,7 @@ BEMObject.prototype.copy = function (target) {
     for (var i = 0; i < props.length; i++) {
         var prop = props[i];
         if (target[prop]) { break; }
-        set(target, prop, target[prop] || this[prop]);
+        target[prop] = this[prop];
     }
 
     target.tech = target.tech || this.tech;
@@ -51,15 +46,16 @@ module.exports = function (path, options) {
 
     if (typeof path === 'string') {
         var base = basename(path);
-        var idx = base.indexOf('.');
+        var nameparts = base.split('.');
 
-        if (idx === -1) {
+        if (nameparts.length === 1) {
             throw new Error('Basename should have extension, but got ' + base);
         }
 
-        var tech = base.substring(idx + 1);
-        var bem = basename(path, '.' + tech);
+        var bem = nameparts.shift();
+        var tech = nameparts.join('.');
         parts = _naming.parse(bem);
+
         if (!parts) { throw new Error('Could not parse "' + bem + '"'); }
         parts.tech = tech;
         parts.level = dirname(path);
@@ -67,19 +63,19 @@ module.exports = function (path, options) {
 
     var bem = new BEMObject(parts);
 
-    Object.defineProperty(bem, 'path', {
-        get: defaultPath,
-        enumerable: true
-    });
-
-    Object.defineProperty(bem, 'id', {
-        get: id,
-        enumerable: true
-    });
-
-    Object.defineProperty(bem, 'bem', {
-        get: id,
-        enumerable: true
+    Object.defineProperties(bem, {
+        path: {
+            get: defaultPath,
+            enumerable: true
+        },
+        id: {
+            get: id,
+            enumerable: true
+        },
+        bem: {
+            get: id,
+            enumerable: true
+        }
     });
 
     return bem;
