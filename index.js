@@ -1,7 +1,7 @@
 var basename = require('path').basename;
 var dirname = require('path').dirname;
 var join = require('path').join;
-var BEMNaming = require('bem-naming').BEMNaming;
+var naming = require('bem-naming');
 
 function BEMObject(props) {
     this.level = props.level;
@@ -43,10 +43,10 @@ BEMObject.prototype.copy = function (target) {
 
 module.exports = function (path, options) {
     var parts = path;
-    var naming = new BEMNaming(options);
+    var _naming = options ? new naming.BEMNaming(options) : naming;
 
     function id() {
-        return naming.stringify(this);
+        return _naming.stringify(this);
     }
 
     if (typeof path === 'string') {
@@ -59,7 +59,7 @@ module.exports = function (path, options) {
 
         var tech = base.substring(idx + 1);
         var bem = basename(path, '.' + tech);
-        parts = naming.parse(bem);
+        parts = _naming.parse(bem);
         if (!parts) { throw new Error('Could not parse "' + bem + '"'); }
         parts.tech = tech;
         parts.level = dirname(path);
