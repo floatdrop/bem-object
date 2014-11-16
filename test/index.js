@@ -14,14 +14,14 @@ describe('object', function () {
     });
 
     it('should support creating from string', function () {
-        var bem = object('level/block__elem_mod_val.js');
+        var bem = object('level/block__elem_mod_val.deps.js');
 
         bem.should.have.property('level', 'level');
         bem.should.have.property('block', 'block');
         bem.should.have.property('elem', 'elem');
         bem.should.have.property('modName', 'mod');
         bem.should.have.property('modVal', 'val');
-        bem.should.have.property('tech', 'js');
+        bem.should.have.property('tech', 'deps.js');
     });
 
     it('should support creating from object', function () {
