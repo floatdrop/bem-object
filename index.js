@@ -48,14 +48,15 @@ module.exports = function (path, options) {
 
     var bem = new BEMObject(parts);
 
-    Object.defineProperty(bem, 'id', {
-        get: id,
-        enumerable: true
-    });
-
-    Object.defineProperty(bem, 'bem', {
-        get: id,
-        enumerable: true
+    Object.defineProperty(bem, {
+        id: {
+            get: id,
+            enumerable: true
+        },
+        bem: {
+            get: id,
+            enumerable: true
+        }
     });
 
     return bem;
